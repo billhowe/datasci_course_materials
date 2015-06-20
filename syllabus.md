@@ -2,6 +2,8 @@
 
 This two-day accelerated course is intended to give graduate students in computer science an overview of the topics associated with data science.  It provides an overview of key topics in scalable data management, selected topics in statistics not always taught in introductory stats classes, a treatment of key topics and algorithms in machine learning, an introduction to the field of visualization research, and an overview of graph analytics. 
 
+All course materials are available in the [github repository](https://github.com/billhowe/datasci_course_materials).  Use [these instructions](https://github.com/billhowe/datasci_course_materials/blob/master/github.md) to access the github material.
+
 # Day 1: Scalable Data Management 
 
 ## Introduction 

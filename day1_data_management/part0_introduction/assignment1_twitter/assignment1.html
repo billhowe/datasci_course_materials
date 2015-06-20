@@ -45,28 +45,20 @@ href="http://www.ccs.neu.edu/home/amislove/twittermood/"><strong>have an excelle
 </ul>
 </p>
 
-<p>Some points to keep in mind:
-<ul>
-<li>This assignment is open-ended in several ways. You'll need to make some decisions about how best to solve the problem and implement them carefully.</li>
-<li><strong>It is perfectly acceptable to discuss your solution on the forum, but don't share code.</strong></li>
-<li><strong>Each student must submit their own solution to the problem.</strong></li>
-<li>You will have an unlimited number of tries for each submission.</li>
-<li>Your code will be run in a protected environment, so you should only use the Python standard libraries unless you are specifically instructed otherwise. Your code should also not rely on any external libraries or web services.</li>
-</ul>
+This assignment is open-ended in several ways. You'll need to make some decisions about how best to solve the problem and implement them carefully.
+
+For the short course, we're going to speed through this assignment, because a) you are all PhD students, and b) rapid answers instead of engineered solutions are part of what data science is all about.
+
 </p>
 
 <h4>The Twitter Application Programming Interface</h4>
 
 <p>Twitter provides a very rich REST API for querying the system, accessing data, and control your account. You can <a href="https://dev.twitter.com/docs">read more about the Twitter API</a></p>
 
-<h4>Python 2.7.3 environment</h4>
+<h4>Python 2.7 environment</h4>
 
-<p>If you are new to Python, you may find it valuable to work through the <a href="http://www.codecademy.com/tracks/python">codeacademy Python tutorials</a>. Focus on tutorials 1-9, plus tutorial 12 on File IO. In addition, many students have recommended <a href="https://developers.google.com/edu/python/">Google's Python class</a>.</p>
-
-<p>You will need to establish a Python programming environment to complete this assignment. You can install Python yourself by <a href="http://www.python.org/download/">downloading it from the Python website</a>, or can use the <a href="https://spark-public.s3.amazonaws.com/datasci/Coursera-Data-Science-Ubuntu.ova">class virtual machine</a>.
+<p>You will need to establish a Python programming environment to complete this assignment. You can install Python yourself by <a href="http://www.python.org/download/">downloading it from the Python website</a>.
 </p>
-
-<h4>Unicode strings</h4>
 
 <p>Strings in the twitter data prefixed with the letter &quot;u&quot; are unicode strings. For example:</p>
 
@@ -88,16 +80,15 @@ print encoded_string
 
 <h4>Getting Started</h4>
 
-<p>Once again: If you are new to Python, many students have recommended <a href="https://developers.google.com/edu/python/">Google's Python class.</a></p>
-
 
 <h3>Problem 1: Get Twitter Data</h3>
 
-<p>As always, the first step is to <a href="https://class.coursera.org/datasci-002/wiki/GithubInstructions">make sure your assignment materials up to date.</a></p>
+<p>As always, the first step is to <a href="https://github.com/billhowe/datasci_course_materials/blob/master/github.md">make sure your assignment materials are up to date.</a></p>
 
 <p>To access the live stream, you will need to install the <a href="http://pypi.python.org/pypi/oauth2/"><strong>oauth2 library</strong></a> so you can properly authenticate.</p>
 
-<p>This library is already installed on the <a href="https://spark-public.s3.amazonaws.com/datasci/Coursera-Data-Science-Ubuntu.ova">class virtual machine</span></a>, but you can install it yourself in your Python environment.  (The command <code>$ pip install oauth2</code> should work for most environments.)</p>
+<p>
+This library can be installed in your Python environment using the command <code>$ pip install oauth2</code> should work for most environments.</p>
 
 <p>The steps below will help you set up your twitter account to be able to access the live 1% stream.</p>
 
@@ -129,7 +120,7 @@ access_token_secret = "&lt;Enter your access token secret here&gt;"
 
 <pre>$ python twitterstream.py > output.txt</pre>
 
-This command pipes the output to a file.  Stop the program with Ctrl-C, but wait at least <strong>3 minutes</strong> for data to accumulate. Keep the file output.txt for the duration of the assignment; we will be reusing it in later problems.  Don't use someone else's file; we will check for uniqueness in other parts of the assignment.
+This command pipes the output to a file.  Stop the program with Ctrl-C, but wait at least <strong>2 minutes</strong> for data to accumulate. Keep the file output.txt for the duration of the assignment; we will be reusing it in later problems.  Don't use someone else's file; we will check for uniqueness in other parts of the assignment.
 </li>
 
 <li>If you wish, modify the file to use the <a href="https://dev.twitter.com/docs/api/1.1/get/search/tweets">twitter search API</a> to search for specific terms.  For example, to search for the term &quot;microsoft&quot;, you can pass the following url to the twitterreq function:
@@ -140,9 +131,9 @@ https://api.twitter.com/1.1/search/tweets.json?q=microsoft
 
 </ol>
 
+<p>
+Now that you have sample data, move on to Problem 2.
 
-<p class="turnin">What to turn in: The first 20 lines of the twitter data you downloaded from the web. You can save the first 20 lines to a file <code>problem_1_submission.txt</code> by using the following command:
-<pre>$ head -n 20 output.txt > problem_1_submission.txt</pre>
 </p>
 
 <h3>Problem 2: Derive the sentiment of each tweet</h3>
@@ -184,15 +175,12 @@ print scores.items() # Print every (term, score) pair in the dictionary
 
 <p>You can read the <a href="https://dev.twitter.com/docs/platform-objects/tweets">Twitter documentation</a> to understand what information each tweet contains and how to access it, but it's not too difficult to deduce the structure by direct inspection.</p>
 
-<p>Your script should print to stdout the sentiment of each tweet in the file, one numeric sentiment score per line.  The first score should correspond to the first tweet, the second score should correspond to the second tweet, and so on.  If you sort the scores, they won't match up.  If you sort the tweets, they won't match up.  If you put the tweets into a dictionary, the order will not be preserved.   Once again: <strong class="important">The nth line of the file you submit should contain only a single number that represents the score of the nth tweet in the input file!</strong></p>
-
-<p class="important">NOTE: You must provide a score for <strong>every</strong> tweet in the sample file, even if that score is zero.  You can assume the sample file will only include English tweets and no other types of streaming messages.</p>
-
-<p>To grade your submission, we will run your program on a tweet file formatted the same way as the <code>output.txt</code> file you generated in Problem 1.</p>
+<p>Your script should print to stdout the sentiment of each tweet in the file, one numeric sentiment score per line.  The first score should correspond to the first tweet, the second score should correspond to the second tweet, and so on.  
+</p>
 
 <p>Hint: This is real-world data, and it can be messy!   Refer to the <a href="https://dev.twitter.com/docs/platform-objects/tweets">twitter documentation</a> to understand more about the data structure you are working with.  Don't get discouraged, and ask for help on the forums if you get stuck!</p>
 
-<p class="turnin">What to turn in: The file <code>tweet_sentiment.py</code> after you've verified that it returns the correct answers.</p>
+<p>Talk to the other students and convince yourself that the scores look correct.
 
 <h3>Problem 3: Derive the sentiment of new terms</h3>
 
@@ -219,11 +207,6 @@ print scores.items() # Print every (term, score) pair in the dictionary
 
 <p>The order of your output does not matter.</p>
 
-<p class="turnin">What to turn in: The file <code>term_sentiment.py</code></p>
-
-<p>How we will grade Part 3: We will run your script on a file that contains strongly positive and strongly negative tweets and verify that the non-sentiment-carrying terms in the strongly positive tweets are assigned a higher score than the non-sentiment-carrying terms in negative tweets.  Your scores need not (and likely will not) exactly match any specific solution.</p>
-
-<p>If the grader is returning "Formatting error: <line of output>", make note of the line of text returned in the message.  This line corresponds to a line of your output.  The grader will generate this error if <code>line.split()</code> does not return <strong>exactly two items</strong>.  One common source of this error is to not remove the two calls to the "lines" function in the solution template; this function prints the number of lines in each file.  Make sure to check the first two lines of your output!</p>
 
 <h3>Problem 4: Compute Term Frequency</h3>
 
@@ -238,7 +221,6 @@ print scores.items() # Print every (term, score) pair in the dictionary
 
 <p>You should assume the tweet file contains data formatted the same way as the livestream data.</p>
 
-
 <p>Your script should print output to stdout.  Each line of output should contain a term, followed by a space, followed by the frequency of that term in the <strong>entire file</strong>. There should be one line per <strong>unique</strong> term in the entire file. Even if 25 tweets contain the word <code>lol</code>, the term <code>lol</code> should only appear once in your output (and the frequency will be at least 25!)  Each line should be in the format <code>&lt;term:string&gt; &lt;frequency:float&gt;</code></p>
 
 <p>For example, if you have the pair <code>(bar, 0.1245)</code> in Python it should appear in the output as:
@@ -250,7 +232,6 @@ print scores.items() # Print every (term, score) pair in the dictionary
 
 <p>Depending on your method of parsing, you may end up computing frequencies for hashtags, links, stop words, phrases, etc.  If you choose to filter out these non-words, that's ok too.</p>
 
-<p class="turnin">What to turn in: The file <code>frequency.py</code></p>
 
 <h3>Problem 5: Which State is happiest?</h3>
 
@@ -297,8 +278,6 @@ something working.  For example, you might choose to ignore all non-English twe
 <p>Note that you may need a <strong>lot</strong> of tweets in order to get enough tweets with location data.  Let the live stream run for a while if you wish.</p>
 
 <p><strong>Your script will not have access to the Internet, so you cannot rely on third party services to resolve geocoded locations!</strong></p>
-
-<p class="turnin">What to turn in: The file <code>happiest_state.py</code></p>
 
 <h3>Problem 6: Top ten hash tags</h3>
 
