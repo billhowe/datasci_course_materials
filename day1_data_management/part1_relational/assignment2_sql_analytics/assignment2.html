@@ -24,22 +24,19 @@ padding-top:1em;
 </style>
 
 </head>
+<body>
+<h1>Assignment 2: In-database Text Analytics</h1>
 
-In the virtual machine, please open a Terminal to complete this assignment. Some  
-relevant commands and notes for this assignment:
-<ul>
-<li><code>cd directory_name</code> : change directory to <code>directory_name</code></li>
-<li><code>ls</code> : list files in the current directory </li>
-<li><code>sqlite3 reuters.db &lt; sql_filename</code> : execute the queries in the file <code>sql_filename</code>against the database <code>reuters.db</code>.  This command assumes <code>reuters.db</code> and <code>sql_filename</code> are in your current directory.</li>
-<li> Pressing the tab key will attempt to autocomplete any command or filename you are currently typing.</li>
-<li> For Problem 2, you will use matrix.db instead of reuters.db</li>
-</ul>
-
+Use <code>sqlite3 reuters.db &lt; sql_filename</code> to execute the queries in the file <code>sql_filename</code>against the database <code>reuters.db</code>.  
 <p>
-Before you start the assignment, please go to the git repository and get the most recent course materials by issuing the following command: <strong>git pull</strong>
+For Problem 2, you will use matrix.db instead of reuters.db</li>
 </p>
 
-<p>For most of these problems, you will use the <a href="https://github.com/uwescience/datasci_course_materials">reuters.db</a> database consisting of a single table:</p>
+<p>
+Before you start the assignment, git pull the repository.
+</p>
+
+<p>For most of these problems, you will use the <a href="https://github.com/billhowe/datasci_course_materials/blob/master/day1_data_management/part1_relational/assignment2_sql_analytics/reuters.db">reuters.db</a> database consisting of a single table:</p>
 
 <pre>frequency(docid, term, count)</pre>
 <p>
@@ -81,7 +78,6 @@ relational algebra expression.</p>
 &pi;<sub>term</sub>(&sigma;<sub>docid=10398_txt_earn and count=1</sub>(frequency))
 </p>
 
-<p class="turnin">What to turn in: Run your query against your local database and determine the number of records returned. Save that value in a .txt file . You can name the file anything. On the assignment page, upload the file as your answer.</p>
 
 <p><strong>(c) union:</strong> Write a SQL statement that is equivalent to the following relational algebra expression. (Hint: you can use the UNION keyword in SQL)</p> 
 
@@ -89,23 +85,17 @@ relational algebra expression.</p>
 &pi;<sub>term</sub>(&sigma;<sub>docid=10398_txt_earn and count=1</sub>(frequency)) U &pi;<sub>term</sub>(&sigma;<sub>docid=925_txt_trade and count=1</sub>(frequency))
 </p>
 
-<p class="turnin">What to turn in: Run your query against your local database and determine the number of records returned. Save that value in a .txt file . You can name the file anything. On the assignment page, upload the file as your answer.</p>
 
 <p><strong>(d) count:</strong> Write a SQL statement to count the number of documents
 containing the word "parliament"</p>
 
-<p class="turnin">What to turn in: Run your query against your local database and determine the number of records returned. Save that value in a .txt file . You can name the file anything. On the assignment page, upload the file as your answer.</p>
 
 <p><strong>(e) big documents</strong> Write a SQL statement to find all documents that have
 more than 300 total terms, including duplicate terms.  (Hint: You can use the HAVING clause, or you can use a nested query.  Another hint: Remember that the count column contains the term frequencies, and you want to consider duplicates.) (docid, term_count)
 </p>
 
-<p class="turnin">What to turn in: Run your query against your local database and determine the number of records returned. Save that value in a .txt file . You can name the file anything. On the assignment page, upload the file as your answer.</p>
-
 
 <p><strong>(f) two words:</strong> Write a SQL statement to count the number of unique documents that contain both the word 'transactions' and the word 'world'. </p>
-
-<p class="turnin">What to turn in: Run your query against your local database and determine the number of records returned as described above.  On the assignment page, turn in a text file <code>two_words.txt</code> that contains the number of records.</p>
 
 
 <h3>Problem 2: Matrix Multiplication in SQL</h3>
@@ -226,11 +216,9 @@ The matrix A and matrix B are both square matrices with 5 rows and 5 columns eac
 class lecture for hints.</p>
 
 
-<p class="turnin">What to turn in: Save the value of cell (2,3) in a .txt file. You can name the file anything you like. On the assignment page, upload the file contatining only the value of the cell (2,3)</p>
+If you're wondering why this approach might be a good idea, consider that advanced databases execute queries in parallel automatically.   So it can be quite efficient to process a very large sparse matrix --- millions of rows or columns --- in a database.
 
-If you're wondering why this might be a good idea, consider that advanced databases execute queries in parallel automatically.   So it can be quite efficient to process a very large sparse matrix --- millions of rows or columns --- in a database.
-
-But a word of warning: In a job interview, don't tell them you recommend implementing linear algebra in a database.  You won't be wrong, but they won't understand databases as well as you now do, and therefore won't understand when and why this is a good idea.   Just say you have done some experiments using databases for analytics, then mention the papers in the reading if they seem incredulous!
+But a word of warning: In a job interview, don't tell them you recommend implementing linear algebra in a database.  You won't necessarily be wrong, but they won't understand databases as well as you now do, and therefore won't understand when and why this is a good idea.   Just say you have done some experiments using databases for analytics, then mention the papers in the reading if they seem incredulous!
 
 <h3>Problem 3: Working with a Term-Document Matrix</h3>
 
