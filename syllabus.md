@@ -29,32 +29,31 @@ All course materials are available in the [github repository](https://github.com
 - Chris Anderson,   ["The End of Theory: The Data Deluge Makes the Scientific Method Obsolete"](http://www.wired.com/science/discoveries/magazine/16-07/pb_theory) , Wired magazine, 2008
 - [Responses to Chris Anderson](http://www.edge.org/discourse/the_end_of_theory.html), 2008
 
-## Databases and the relational algebra
+## Relational Databases for Data Science
 
-- Relational Database History (5 min)
-- Relational Algebra (20 min)
-- Algebraic Optimization (15 min)
-- Logical Data Independence (10 min)
-- In-Database Analytics (15 min)
-- Assignment: SQL Analytics (45 min)
+- Relational Database Key Ideas (20 min)
+- In-Database Analytics (20 min)
+- Relational Algorithmics (10 min)
+- Exercise: SQL Analytics (45 min)
 
 *Readings*
 
 - [How Vertica Was the Star of the Obama Campaign, and Other Revelations](http://citoresearch.com/data-science/how-vertica-was-star-obama-campaign-and-other-revelations)
 - E. F. Codd,  [1981 Turing Award Lecture, "](http://amturing.acm.org/award_winners/codd_1000892.cfm)  [Relational Database: ](http://amturing.acm.org/award_winners/codd_1000892.cfm)  [A Practical Foundation for Productivity"](http://amturing.acm.org/award_winners/codd_1000892.cfm), 1981 (Think about which arguments from this short piece are still relevant today.)
-- [Advanced] Cohen et al. ["MAD Skills: New Analysis Practices for Big Data"](http://db.cs.berkeley.edu/papers/vldb09-madskills.pdf), 2009
-- [Advanced] Erik Meijer, Gavin Bierma  [co-Relational Model of Large Shared Data Banks](http://queue.acm.org/detail.cfm?id=1961297), Communications of the ACM, 2011
+- Cohen et al. ["MAD Skills: New Analysis Practices for Big Data"](http://db.cs.berkeley.edu/papers/vldb09-madskills.pdf), 2009
+- Erik Meijer, Gavin Bierma  [co-Relational Model of Large Shared Data Banks](http://queue.acm.org/detail.cfm?id=1961297), Communications of the ACM, 2011
 
-## MapReduce
+## Beyond MapReduce
 
-- MapReduce Abstractions and model (10 min)
-- Examples: Text, relational join, matrix multiply (30 min)
+- MapReduce refresher (10 min)
+- Examples: Text, relational join, matrix multiply (20 min)
 - Implementation (15 min)
 - Comparison with Databases (30 min)
-- Assignment: MR Algorithms (1 hour)
+- Exercise: MR Algorithms (1 hour)
 
 *Readings*
 
+- Gog et al, [Musketeer: all for one, one for all in data processing systems](http://www.cl.cam.ac.uk/research/srg/netos/camsas/pubs/eurosys15-musketeer.pdf), Eurosys 15,
 - Dean and Ghemawat, " [MapReduce: A Flexible Data Processing Too](http://cacm.acm.org/magazines/2010/1/55744-mapreduce-a-flexible-data-processing-tool/fulltext)l", _Communications of the ACM, _January 2010.
 - Ullman, Rajaraman,  [Mining of Massive Datasets](http://infolab.stanford.edu/~ullman/mmds.html), Chapter 2
 - Stonebraker et al., " [MapReduce and Parallel DBMS's: Friends or Foes?](http://database.cs.brown.edu/papers/stonebraker-cacm2010.pdf)", Communications of the ACM, January 2010.
