@@ -64,10 +64,9 @@ Shared Memory](http://www.cs.washington.edu/public_files/grad/tech_reports/radis
 ## NoSQL
 
 - Introduction (10 min)
-- Eventual Consistency (20 min)
-- Examples: Memcached, Dynamo, BigTable, MongoDB, Other Google Systems (1 hour)
+- Compared by Features (10 min)
 - NoSQL Response (10 min)
-- Assignment: Graph Processing with Pig on AWS (Optional)
+- Exercise: Graph Processing with Pig on AWS (if time)
 
 *Readings*
 
