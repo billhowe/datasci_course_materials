@@ -8,7 +8,7 @@ All course materials are available in the [github repository](https://github.com
 
 ## Introduction 
 
-- Appetite whetting and context (10 min)
+- Appetite whetting and context (15 min)
 - Course goals and logistics (10 min)
 - Twitter Sentiment Analysis (1 hour)
 
@@ -31,14 +31,12 @@ All course materials are available in the [github repository](https://github.com
 
 ## Databases and the relational algebra
 
-- From Data Models to Databases (10 min)
-- Motivation for Relaional Algebra (10 min)
-- Relational Algebra Introduction (10 min)
-- RA Operators (30 min)
-- Adapting SQL for Data Science (10 min)
-- Physical Optimization (10 min)
-- Logical Data Independence (20 min)
-- Assignment: SQL Analytics (30 min)
+- Relational Database History (5 min)
+- Relational Algebra (20 min)
+- Algebraic Optimization (15 min)
+- Logical Data Independence (10 min)
+- In-Database Analytics (15 min)
+- Assignment: SQL Analytics (45 min)
 
 *Readings*
 
