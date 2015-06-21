@@ -32,9 +32,9 @@ All course materials are available in the [github repository](https://github.com
 ## Relational Databases for Data Science
 
 - Relational Database Key Ideas (20 min)
+- Exercise: SQL Analytics (30 min)
 - In-Database Analytics (20 min)
 - Relational Algorithmics (10 min)
-- Exercise: SQL Analytics (45 min)
 
 *Readings*
 
@@ -46,14 +46,17 @@ All course materials are available in the [github repository](https://github.com
 ## Beyond MapReduce
 
 - MapReduce refresher (10 min)
-- Examples: Text, relational join, matrix multiply (20 min)
-- Implementation (15 min)
-- Comparison with Databases (30 min)
-- Exercise: MR Algorithms (1 hour)
+- Exercise: MR Algorithms (30 min)
+- Comparison with Databases (10 min)
+- Myria: Analytics-as-a-Service (20 min)
+- Radish: Compiling Distributed Query Plans (10 min)
 
 *Readings*
 
-- Gog et al, [Musketeer: all for one, one for all in data processing systems](http://www.cl.cam.ac.uk/research/srg/netos/camsas/pubs/eurosys15-musketeer.pdf), Eurosys 15,
+- Michael Armbrust, Reynold S. Xin, Cheng Lian, Yin Huai, Davies Liu, Joseph K. Bradley, Xiangrui Meng, Tomer Kaftan, Michael J. Franklin, Ali Ghodsi, and Matei Zaharia. 2015. [Spark SQL: Relational Data Processing in Spark](http://people.csail.mit.edu/matei/papers/2015/sigmod_spark_sql.pdf). SIGMOD '15
+- Brandon Myers et al, [Radish: Compiling Efficient Query Plans for Distributed
+Shared Memory](http://www.cs.washington.edu/public_files/grad/tech_reports/radish.pdf), 2015
+- Gog et al, [Musketeer: all for one, one for all in data processing systems](http://www.cl.cam.ac.uk/research/srg/netos/camsas/pubs/eurosys15-musketeer.pdf), Eurosys 15
 - Dean and Ghemawat, " [MapReduce: A Flexible Data Processing Too](http://cacm.acm.org/magazines/2010/1/55744-mapreduce-a-flexible-data-processing-tool/fulltext)l", _Communications of the ACM, _January 2010.
 - Ullman, Rajaraman,  [Mining of Massive Datasets](http://infolab.stanford.edu/~ullman/mmds.html), Chapter 2
 - Stonebraker et al., " [MapReduce and Parallel DBMS's: Friends or Foes?](http://database.cs.brown.edu/papers/stonebraker-cacm2010.pdf)", Communications of the ACM, January 2010.
@@ -69,7 +72,6 @@ All course materials are available in the [github repository](https://github.com
 *Readings*
 
 - Rick Cattell, " [Scalable SQL and NoSQL Data Stores](http://www.sigmod.org/publications/sigmod-record/1012/pdfs/04.surveys.cattell.pdf)", _SIGMOD Record_, December 2010 (39:4)
-- Michael Armbrust, Reynold S. Xin, Cheng Lian, Yin Huai, Davies Liu, Joseph K. Bradley, Xiangrui Meng, Tomer Kaftan, Michael J. Franklin, Ali Ghodsi, and Matei Zaharia. 2015. [Spark SQL: Relational Data Processing in Spark](http://people.csail.mit.edu/matei/papers/2015/sigmod_spark_sql.pdf). SIGMOD '15
 - Data cleaning (not covered in lectures)
   - Elmagarmid, et. al. "Duplicate Record Detection:  A Survey"
   - Koudas, et. al. "Record Linkage:  Similarity Measures and Algorithms"
