@@ -243,7 +243,6 @@ The result is a square document-document matrix, where each cell represents the 
 
 <p><strong>(h) similarity matrix:</strong> Write a query to compute the similarity matrix <em>DD<sup>T</sup></em>. (Hint: The transpose is trivial -- just join on columns to columns instead of columns to rows.)  The query could take some time to run if you compute the entire result.  But notice that you don't need to compute the similarity of both (doc1, doc2) and (doc2, doc1) -- they are the same, since similarity is symmetric.  If you wish, you can avoid this wasted work by adding a condition of the form a.docid &lt; b.docid to your query.  (But the query still won't return immediately if you try to compute every result -- don't expect otherwise.)</p>
 
-<p class="turnin">What to turn in: On the assignment page, enter a .txt file containing the similarity value of the two documents '10080_txt_crude' and '17035_txt_earn'. You can name the file anything you like.</p>
 
 <p>You can also use this similarity metric to implement some primitive search capabilities.  Consider a keyword query that you might type into Google: It's a bag of words, just like a document (typically a keyword query will have far fewer terms than a document, but that's ok).</p>
 
@@ -264,7 +263,6 @@ SELECT 'q' as docid, 'treasury' as term, 1 as count
 Then, compute the similarity matrix again, but filter for only similarities involving the "query document": docid = 'q'.  Consider creating a view of this new corpus to simplify things.
 </p>
 
-<p class="turnin">What to turn in: On the assignment page, enter the maximum similarity score between the keyword query and any document.  Your SQL query should return a list of (docid, similarity) pairs, but you will submit only a single number: the highest score in the list.</span></p>
 
 
 </div>
