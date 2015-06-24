@@ -61,6 +61,9 @@ Shared Memory](http://www.cs.washington.edu/public_files/grad/tech_reports/radis
 - Ullman, Rajaraman,  [Mining of Massive Datasets](http://infolab.stanford.edu/~ullman/mmds.html), Chapter 2
 - Stonebraker et al., " [MapReduce and Parallel DBMS's: Friends or Foes?](http://database.cs.brown.edu/papers/stonebraker-cacm2010.pdf)", Communications of the ACM, January 2010.
 
+Other papers mentioned:
+- Afrati, Foto N. and Ullman, Jeffrey D. [Optimizing Joins in a Map-Reduce Environment](http://ilpubs.stanford.edu:8090/957/) EDBT 2010 
+
 ## NoSQL
 
 - Introduction (10 min)
@@ -79,8 +82,11 @@ Shared Memory](http://www.cs.washington.edu/public_files/grad/tech_reports/radis
 
 ## Cherry-picked Statistics Topics
 
-- Experimental Design (20 min)
-- Multiple Hypothesis Testing (20 min)
+- Motivation: Science "Losing Power" (5 min)
+- Publication Bias and Effect Size (10 min)
+- Fraud Detection (10 min)
+- Multiple Hypothesis Testing (10 min)
+- Is Big Data Different? (10 min)
 - Permutation Methods (20 min)
 
 *Readings*
